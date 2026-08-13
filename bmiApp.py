@@ -12,4 +12,23 @@ height_cm = st.numbera_input("กรอกส่วนสูงของคุ�
 if st.button("คำนวณค่า BMI 🎯"):
     # แปลงส่วนสูงจาก cm เป็น เมตร แล้วคำนวณ BMI
     height_m = height_cm / 100
-    bmi = weight / (height_m
+    bmi = weight / (height_m ** 2)
+    
+st.write("---")
+st.heafer(f"ค่า BMI ของคุณคือ: **{bmi:.2f}**")
+
+#ส่วนที่ 4 แปลผลค่า BMI ตามเกณฑ์
+  if bmi < 18.5:
+      st.warning(" คุณมีน้ำหนักน้อยกว่าเกณฑ์ (ผอม)")
+       elif bmi < 23.0:
+            result = "สุขภาพดี"
+        elif bmi < 25.0:
+            result = "ท้วม"
+        else:
+            result = "อ้วน"
+
+        st.write(f"📊 ผลการประเมิน: **{result}**")
+
+st.write("----------------------------------------")
+st.write("จัดทำโดย ภัทรภพ เวียงบรรพต")
+st.write("เลขที่ 43")
