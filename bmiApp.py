@@ -18,14 +18,14 @@ st.write("---")
 st.heafer(f"ค่า BMI ของคุณคือ: **{bmi:.2f}**")
 
 #ส่วนที่ 4 แปลผลค่า BMI ตามเกณฑ์
-  if bmi < 18.5:
-      st.warning(" คุณมีน้ำหนักน้อยกว่าเกณฑ์ (ผอม)")
-  elif bmi < 23.0:
-            st.success = "สุขภาพดี"
-  elif bmi < 25.0:
-            st.info = "ท้วม"
-  else:
-       st.error = "อ้วน"
+if bmi < 18.5:
+    st.warning(" คุณมีน้ำหนักน้อยกว่าเกณฑ์ (ผอม)")
+elif bmi < 23.0:
+    st.success = "สุขภาพดี"
+elif bmi < 25.0:
+    st.info = "ท้วม"
+else:
+    st.error = "อ้วน"
 
-st.write("----------------------------------------")
+st.divider()
 st.write("นายภัทรภพ เวียงบรรพต เลขที่ 43 ม.4/10")
