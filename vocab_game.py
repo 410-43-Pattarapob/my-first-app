@@ -26,14 +26,14 @@ def show_result_dialog(ans1, ans2):
     u_ans2 = ans2.strip().lower()
 
     # ตรวจข้อ 1
-    if u_ans1 == "apple":
+    if u_ans1 == "dog":
         st.success("✅ ข้อ 1: ถูกต้อง")
         score += 1
     else:
         st.error(f"❌ ข้อ 1: ยังไม่ถูกต้อง (คุณตอบ '{u_ans1}')")
 
     # ตรวจข้อ 2
-    if u_ans2 == "fish":
+    if u_ans2 == "banana":
         st.success("✅ ข้อ 2: ถูกต้อง")
         score += 1
     else:
@@ -65,11 +65,11 @@ st.divider()
 
 # 3. ช่องรับคำตอบ (ใช้ value ผูกกับตัวแปรตรงๆ เพื่อสั่งเคลียร์ได้)
 ans1 = st.text_input(
-    "ข้อ 1: An `a_le` a day keeps the doctor away.",
+    "ข้อ 1: An `dog` a day keeps the doctor away.",
     value=st.session_state.ans1_val,
 )
 ans2 = st.text_input(
-    "ข้อ 2: Cats love to eat `f_sh`.",
+    "ข้อ 2: Cats love to eat `banana`.",
     value=st.session_state.ans2_val,
 )
 
